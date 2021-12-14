@@ -20,7 +20,7 @@ jobs:
     - name: test the envs
       run: echo "Hello $MESSAGE "
       env:
-        MESSAGE: World
+        MESSAGE: ${{ Secrets.USERNAME }}
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
